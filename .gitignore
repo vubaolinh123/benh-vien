@@ -1,0 +1,5 @@
+*.log
+*.zip
+preview/
+.DS_Store
+Thumbs.db
