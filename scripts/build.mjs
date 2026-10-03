@@ -13,7 +13,7 @@ for (const file of ['index.html', 'styles.css', 'app.js']) {
 const assets = await readdir(path.join(root, 'assets'), { withFileTypes: true });
 let count = 0;
 for (const asset of assets) {
-  if (asset.isFile() && /\.(png|jpe?g|webp|gif|svg|ico|avif)$/i.test(asset.name)) {
+  if (asset.isFile() && /\.(png|jpe?g|webp|gif|svg|ico|avif|mp4)$/i.test(asset.name)) {
     await copyFile(path.join(root, 'assets', asset.name), path.join(output, 'assets', asset.name));
     count++;
   }
@@ -22,4 +22,4 @@ await mkdir(path.join(output, 'demo-2'), { recursive: true });
 for (const file of ['index.html', 'styles.css', 'app.js', 'interactions.js']) {
   await copyFile(path.join(root, 'demo-2', file), path.join(output, 'demo-2', file));
 }
-console.log(`Static website ready: dist/ (demo 01 + demo 02, ${count} images).`);
+console.log(`Static website ready: dist/ (demo 01 + demo 02, ${count} media assets).`);

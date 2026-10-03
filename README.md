@@ -48,3 +48,7 @@ Biểu mẫu không gửi yêu cầu mạng, không ghi localStorage và không 
 - Chuyên khoa: mảng `specialties` trong `app.js`.
 
 Để gửi khách hàng, nén `index.html`, `styles.css`, `app.js`, `assets` và README. Website chưa được xuất bản lên Internet.
+
+## Cập nhật đầy đủ section demo 02
+
+Xem docs/demo-2-section-audit.md để đối chiếu từng khối trang chủ với trang tham chiếu. Demo 02 bổ sung đội ngũ có khung chi tiết, hai dải banner phụ, ảnh ghép cơ sở vật chất, bảng giá, thư viện ảnh/video, hỏi đáp phân trang, tin nổi bật và Sống khỏe – Tin tức. Hai MP4 demo được đóng gói sẵn trong assets, build Vercel không cần FFmpeg.
