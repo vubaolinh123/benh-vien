@@ -18,4 +18,8 @@ for (const asset of assets) {
     count++;
   }
 }
-console.log(`Static website ready: dist/ (3 web files, ${count} images).`);
+await mkdir(path.join(output, 'demo-2'), { recursive: true });
+for (const file of ['index.html', 'styles.css', 'app.js', 'interactions.js']) {
+  await copyFile(path.join(root, 'demo-2', file), path.join(output, 'demo-2', file));
+}
+console.log(`Static website ready: dist/ (demo 01 + demo 02, ${count} images).`);

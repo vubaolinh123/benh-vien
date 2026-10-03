@@ -19,6 +19,14 @@ Tài liệu: https://vercel.com/docs/builds/configure-a-build
 
 ## Nội dung và tài sản
 
+### Demo 02
+
+- Đường dẫn: `/demo-2/` (local: http://127.0.0.1:5500/demo-2/).
+- Bố cục tham khảo https://benhvienthucuc.vn/: header tìm kiếm, menu ngang, banner chuyển slide, dịch vụ, đội ngũ chăm sóc, chuyên khoa, hình ảnh, hỗ trợ, tin tức và hỏi đáp.
+- Dùng nhận diện và nội dung Đại An; không dùng tên bác sĩ hoặc nội dung quảng cáo của Thu Cúc. Phần đội ngũ dùng ảnh hoạt động thực tế, chờ hồ sơ bác sĩ được xác nhận.
+- Source riêng trong `demo-2/`, dùng chung ảnh và CSS nền ở thư mục gốc. Build Vercel xuất cả hai demo, trang chủ demo 01 giữ nguyên.
+- Chuyển banner thủ công bằng mũi tên/chấm, tìm kiếm, bộ lọc, thư viện ảnh và biểu mẫu demo đều có tương tác.
+
 - Logo: `assets/Dai_An-01.png`, file gốc do khách hàng cung cấp.
 - Ảnh thiết kế: `assets/design-reference.png`, do khách hàng cung cấp. Ảnh minh họa Sản/Tai Mũi Họng được hiển thị bằng CSS từ ảnh mẫu. Banner dùng ảnh bìa chính thức đã lấy từ fanpage (`assets/9d44f85881139d9f.png`), hiển thị full width và giữ nguyên tỷ lệ. Cần thay bằng ảnh gốc chất lượng cao khi triển khai chính thức.
 - Ảnh hoạt động và bài viết: fanpage https://www.facebook.com/bvdkdaian/?locale=vi_VN. Đọc công khai qua trình duyệt ngày 03/10/2026; ảnh lưu tại chỗ để demo không phụ thuộc URL CDN hết hạn.
