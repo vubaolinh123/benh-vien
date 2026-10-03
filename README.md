@@ -34,7 +34,7 @@ Tài liệu: https://vercel.com/docs/builds/configure-a-build
 - `assets/manifest.json` lưu nguồn ảnh do công cụ trình duyệt xuất.
 - Một số ảnh hoạt động cộng đồng được dùng minh họa cho chuyên khoa, không phải ảnh nhân sự/khoa đã xác minh.
 - Thông tin hotline, địa chỉ, email và làm việc cuối tuần lấy từ fanpage.
-- Font Be Vietnam Pro tải từ Google Fonts; khi offline dùng Arial.
+- Font thương hiệu nhúng tại chỗ: Exo cho tiêu đề; SVN-Gilroy Light/Bold cho văn bản. Xem `docs/typography.md`.
 
 ## Giới hạn demo
 
@@ -52,3 +52,7 @@ Biểu mẫu không gửi yêu cầu mạng, không ghi localStorage và không 
 ## Cập nhật đầy đủ section demo 02
 
 Xem docs/demo-2-section-audit.md để đối chiếu từng khối trang chủ với trang tham chiếu. Demo 02 bổ sung đội ngũ có khung chi tiết, hai dải banner phụ, ảnh ghép cơ sở vật chất, bảng giá, thư viện ảnh/video, hỏi đáp phân trang, tin nổi bật và Sống khỏe – Tin tức. Hai MP4 demo được đóng gói sẵn trong assets, build Vercel không cần FFmpeg.
+
+## Font thương hiệu
+
+`brand-fonts.css` dùng Exo cho tiêu đề, SVN-Gilroy Light/Bold cho nội dung. Font được đóng gói trong `assets` và build Vercel; không tải CDN khi chạy. Chưa có file SVN-Gilroy Regular/Medium riêng. Xem `docs/typography.md` để biết nguồn font.
