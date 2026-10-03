@@ -1,0 +1,21 @@
+import { copyFile, mkdir, readdir } from 'node:fs/promises';
+import { fileURLToPath } from 'node:url';
+import path from 'node:path';
+
+const root = fileURLToPath(new URL('../', import.meta.url));
+const output = path.join(root, 'dist');
+await mkdir(path.join(output, 'assets'), { recursive: true });
+
+// Publish only the website and image assets, not local logs or source metadata.
+for (const file of ['index.html', 'styles.css', 'app.js']) {
+  await copyFile(path.join(root, file), path.join(output, file));
+}
+const assets = await readdir(path.join(root, 'assets'), { withFileTypes: true });
+let count = 0;
+for (const asset of assets) {
+  if (asset.isFile() && /\.(png|jpe?g|webp|gif|svg|ico|avif)$/i.test(asset.name)) {
+    await copyFile(path.join(root, 'assets', asset.name), path.join(output, 'assets', asset.name));
+    count++;
+  }
+}
+console.log(`Static website ready: dist/ (3 web files, ${count} images).`);

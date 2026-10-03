@@ -3,3 +3,5 @@
 preview/
 .DS_Store
 Thumbs.db
+dist/
+.vercel/

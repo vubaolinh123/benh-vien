@@ -4,6 +4,19 @@ Mở `index.html` trực tiếp, hoặc chạy `python -m http.server 5500 --bin
 
 Không cần npm, framework, database hoặc bước build. Có responsive, menu di động, tìm kiếm không dấu, bộ lọc bài viết, chi tiết bài/chuyên khoa, đặt lịch mô phỏng, tra cứu mẫu, góp ý và FAQ.
 
+## Triển khai trên Vercel
+
+1. Trong Vercel, chọn Add New → Project và import repository `vubaolinh123/benh-vien`.
+2. Chọn nhánh `main`, Root Directory là thư mục gốc repository (`.`).
+3. Framework Preset: **Other**. Cấu hình trong `vercel.json` đã đặt Build Command là `node scripts/build.mjs`, Output Directory là `dist`, và bỏ qua bước cài dependency.
+4. Không cần biến môi trường. Chọn Deploy. Nếu project đã tồn tại, redeploy commit mới nhất từ `main`.
+
+Kiểm tra bản build tại máy: chạy `node scripts/build.mjs`, rồi `python -m http.server 5501 --bind 127.0.0.1 --directory dist`. Mở http://127.0.0.1:5501.
+
+Build dùng Node.js tích hợp sẵn trên Vercel, không dùng thư viện ngoài. Thư mục `dist` chỉ chứa HTML, CSS, JS và ảnh cần cho website. Các biểu mẫu vẫn ở chế độ demo, không tạo lịch khám thật.
+
+Tài liệu: https://vercel.com/docs/builds/configure-a-build
+
 ## Nội dung và tài sản
 
 - Logo: `assets/Dai_An-01.png`, file gốc do khách hàng cung cấp.
